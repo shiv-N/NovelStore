@@ -17,6 +17,7 @@ namespace demoNovelApi.Controllers
 
         public NovelsController(ApplicationDbContext context)
         {
+
             this._context = context;
         }
 
