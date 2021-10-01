@@ -1,11 +1,16 @@
 version: 0.0
 os: linux
 files:
-  - source: ./
+  - source: /
     destination: /var/www/html/dotNetCore-sample
+permissions:
+  - object: /var/www/
+    owner: root
+    group: root
+    mode: 777
 hooks:
   BeforeInstall:
-    - location: scripts\install_dependencies.sh
+    - location: scripts/install_dependencies.sh
       timeout: 300
       runas: root
   ApplicationStart:
