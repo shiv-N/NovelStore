@@ -5,15 +5,15 @@ files:
     destination: /var/www/html/dotNetCore-sample
 permissions:
   - object: /var/www/
-    owner: root
-    group: root
+    owner: CodeDeployDemo
+    group: CodeDeployDemo
     mode: 777
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies.sh
       timeout: 300
-      runas: root
+      runas: CodeDeployDemo
   ApplicationStart:
     - location: scripts/start_server.sh
       timeout: 300
-      runas: root 
+      runas: CodeDeployDemo 
