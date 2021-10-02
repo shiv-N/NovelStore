@@ -11,5 +11,5 @@ phases:
 artifacts:
   files:
     - dev/*
-    - scripts/**/*
+    - deploy-scripts/**/*
     - appspec.yml
