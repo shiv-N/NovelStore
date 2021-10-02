@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  install:
+        runtime-versions:
+            dotnet: 3.1
+  build:
+    commands:
+      - dotnet build 
+      - dotnet publish -c release -o ./dev
+artifacts:
+  files:
+    - dev/*
+    - scripts/**/*
+    - appspec.yml
