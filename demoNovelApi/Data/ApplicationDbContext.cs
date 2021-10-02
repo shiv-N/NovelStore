@@ -11,6 +11,7 @@ namespace demoNovelApi.Data
         }
         public DbSet<Novel> Books { get; set; }
 
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Novel>().HasData(new Novel
