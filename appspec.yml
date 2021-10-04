@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ssm-user
+    destination: /var/www/
   - source: deploy-scripts/website.service
     destination: /etc/systemd/system
 hooks:
