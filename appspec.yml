@@ -10,7 +10,7 @@ hooks:
       - location: deploy-scripts/application_stop.sh
         timeout: 10
   BeforeInstall:
-      - location: deploy-scripts/before-install.sh
+      - location: find /opt/codedeploy-agent/ -name before-install.sh
         timeout: 10
   ApplicationStart:
       - location: deploy-scripts/application_start.sh
