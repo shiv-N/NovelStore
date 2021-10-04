@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/www
+    destination: /home/ssm-user
   - source: deploy-scripts/website.service
     destination: /etc/systemd/system
 hooks:
@@ -10,7 +10,7 @@ hooks:
       - location: deploy-scripts/application_stop.sh
         timeout: 10
   BeforeInstall:
-      - location: find /opt/codedeploy-agent/ -name before-install.sh
+      - location: deploy-scripts/before-install.sh
         timeout: 10
   ApplicationStart:
       - location: deploy-scripts/application_start.sh
