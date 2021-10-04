@@ -7,11 +7,11 @@ files:
     destination: /etc/systemd/system
 hooks:
   ApplicationStop:
-      - location: deploy-scripts/application_stop.sh
-        timeout: 10
+      - location: application_stop.sh
+        timeout: 100
   BeforeInstall:
-      - location: deploy-scripts/before-install.sh
-        timeout: 10
+      - location: before-install.sh
+        timeout: 100
   ApplicationStart:
-      - location: deploy-scripts/application_start.sh
-        timeout: 10
+      - location: application_start.sh
+        timeout: 100
