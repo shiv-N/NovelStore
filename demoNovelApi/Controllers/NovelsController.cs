@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace demoNovelApi.Controllers
 {
+    
     [Route("api/[controller]")]
     [ApiController]
     public class NovelsController : ControllerBase
